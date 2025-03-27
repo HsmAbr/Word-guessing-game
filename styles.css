@@ -62,10 +62,10 @@ h1 {
 
 .timer-progress-fill {
     fill: none;
-    stroke: #e74c3c;
+    stroke: #2ecc71;
     stroke-width: 8;
     stroke-linecap: round;
-    transition: stroke-dashoffset 0.1s linear;
+    transition: stroke-dashoffset 0.1s linear, stroke 0.3s linear;
 }
 
 .timer {
@@ -75,7 +75,8 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 3rem;
     font-weight: bold;
-    color: #e74c3c;
+    color: #2c3e50;
+    transition: color 0.3s linear;
 }
 
 .word-display {
@@ -169,6 +170,28 @@ button:hover:not(:disabled) {
 .success {
     color: #2ecc71;
     font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.revealed-word {
+    color: #2ecc71;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.revealed-word:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+    transform: scale(1.02);
 }
 
 .landing-page {
