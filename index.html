@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landingPage" class="landing-page">
+        <h1>Word Guessing Game</h1>
+        <button id="startGameButton" class="landing-button">Let's know each other</button>
+    </div>
+
+    <div id="gamePage" class="game-container hidden">
+        <h1>Word Guessing Game</h1>
+        
+        <div class="game-status">
+            <p>Iterations: <span id="iterations">0</span></p>
+            <p>Time: <span id="time">0:00</span></p>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-circle">
+                <svg class="timer-progress" viewBox="0 0 100 100">
+                    <circle class="timer-progress-bg" cx="50" cy="50" r="45"/>
+                    <circle class="timer-progress-fill" cx="50" cy="50" r="45"/>
+                </svg>
+                <div class="timer" id="timer">10</div>
+            </div>
+        </div>
+
+        <div class="word-display">
+            <div class="previous-words">
+                <p>Previous Words:</p>
+                <div id="previousWords"></div>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <div class="image-container">
+                <div class="word-overlay left-word"></div>
+                <img id="generatedImage" src="" alt="Generated image based on words">
+                <div class="word-overlay right-word"></div>
+            </div>
+        </div>
+
+        <div class="player-inputs">
+            <div class="player-section">
+                <h2>Player 1</h2>
+                <input type="password" id="player1Input" placeholder="Type your word...">
+            </div>
+            <div class="player-section">
+                <h2>Player 2</h2>
+                <input type="password" id="player2Input" placeholder="Type your word...">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="submitButton">Submit Words</button>
+            <button id="resetButton" disabled>Reset Game</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
